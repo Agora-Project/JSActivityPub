@@ -5,7 +5,7 @@
 */
 
 Package.describe({
-    name: 'agoraforum:JSActivityPub',
+    name: 'agoraforum:activitypub',
     version: '0.0.1',
     summary: 'ActivityPub Library',
     git: 'https://github.com/Agora-Project/JSActivityPub',
@@ -35,5 +35,5 @@ Package.onUse(function(api) {
 
 Package.onTest(function(api) {
     api.use('tinytest');
-    api.use('agoraforum:JSActivityPub', ['client', 'server']);
+    api.use('agoraforum:activitypub', ['client', 'server']);
 });
