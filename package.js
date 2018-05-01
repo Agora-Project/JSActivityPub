@@ -15,16 +15,15 @@ Package.describe({
 Package.onUse(function(api) {
     both = ['client', 'server'];
 
-    api.addFiles([
-        'activityRequest.js'
-    ], 'server');
+    api.mainModule('activityRequest.js', 'server');
 
     api.addFiles([
     ], both);
 
     api.use([
+        'ecmascript',
         'timbrandin:fetch'
-    ], both);
+    ], 'server');
 
     api.addFiles([
     ], 'client');
