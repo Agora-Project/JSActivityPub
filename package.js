@@ -22,7 +22,8 @@ Package.onUse(function(api) {
 
     api.use([
         'ecmascript',
-        'timbrandin:fetch'
+        'timbrandin:fetch',
+        'aldeed:simple-schema'
     ], 'server');
 
     api.addFiles([
