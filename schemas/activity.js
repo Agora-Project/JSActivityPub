@@ -1,13 +1,20 @@
-let activityTypes = ['Create', 'Update', 'Delete', 'Follow', 'Unfollow'];
+/*
+    Javascript ActivityPub Software
+    Copyright (C) 2018 Gregory Sartucci
+    License: AGPL-3.0, Check file LICENSE
+*/
 
-let activity = new SimpleSchema({
+var activityTypes = ['Create', 'Update', 'Delete', 'Follow', 'Unfollow'];
+
+var activity = new SimpleSchema({
     id: {
         type: String,
         regEx: SimpleSchema.RegEx.Url
     },
     actor: {
         type: String,
-        regEx: SimpleSchema.RegEx.Url
+        regEx: SimpleSchema.RegEx.Url,
+        optional: true
     },
     type: {
         type: String,

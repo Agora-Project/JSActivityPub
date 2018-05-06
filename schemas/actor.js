@@ -1,3 +1,9 @@
+/*
+    Javascript ActivityPub Software
+    Copyright (C) 2018 Gregory Sartucci
+    License: AGPL-3.0, Check file LICENSE
+*/
+
 var actorTypes = ['Application', 'Group', 'Organization', 'Person', 'Service'];
 
 actor = new SimpleSchema({
