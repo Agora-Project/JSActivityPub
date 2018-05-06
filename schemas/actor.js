@@ -1,6 +1,9 @@
 var actorTypes = ['Application', 'Group', 'Organization', 'Person', 'Service'];
 
-var actor = new SimpleSchema({
+actor = new SimpleSchema({
+    '@context': {
+        type: Object
+    },
     id: { //This users unique id. Can be used with activitypub to fetch their public data.
         type: String,
         regEx: SimpleSchema.RegEx.Url

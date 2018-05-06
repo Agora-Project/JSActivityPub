@@ -15,7 +15,10 @@ Package.describe({
 Package.onUse(function(api) {
     both = ['client', 'server'];
 
-    api.mainModule('activityRequest.js', 'server');
+    api.addFiles([
+        'activityRequest.js',
+        'schemas/actor.js'
+    ], 'server');
 
     api.addFiles([
     ], both);
@@ -31,6 +34,11 @@ Package.onUse(function(api) {
 
     api.use([
     ], 'client');
+
+    api.export([
+        'getActivityFromUrl',
+        'actor'
+    ]);
 });
 
 Package.onTest(function(api) {
