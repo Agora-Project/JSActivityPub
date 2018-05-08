@@ -15,6 +15,10 @@ Package.describe({
 Package.onUse(function(api) {
     both = ['client', 'server'];
 
+    Npm.depends({
+        'simpl-schema': '1.1.0'
+    });
+
     api.addFiles([
         'activityRequest.js',
         'schemas/actor.js'
@@ -26,7 +30,7 @@ Package.onUse(function(api) {
     api.use([
         'ecmascript',
         'timbrandin:fetch',
-        'aldeed:simple-schema'
+        'aldeed:collection2'
     ], 'server');
 
     api.addFiles([
@@ -37,6 +41,7 @@ Package.onUse(function(api) {
 
     api.export([
         'getActivityFromUrl',
+        'actorTypes',
         'actor'
     ]);
 });
