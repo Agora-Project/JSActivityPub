@@ -4,15 +4,14 @@
     License: AGPL-3.0, Check file LICENSE
 */
 
-var actorTypes = ['Application', 'Group', 'Organization', 'Person', 'Service'];
+actorTypes = ['Application', 'Group', 'Organization', 'Person', 'Service'];
 
 actor = new SimpleSchema({
-    '@context': {
-        type: Object
-    },
     id: { //This users unique id. Can be used with activitypub to fetch their public data.
         type: String,
-        regEx: SimpleSchema.RegEx.Url
+        regEx: SimpleSchema.RegEx.Url,
+        index: true,
+        unique: true
     },
     url: { //This users web url. For opening their profile with a browser.
         type: String,
