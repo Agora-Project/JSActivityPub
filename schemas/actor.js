@@ -45,8 +45,9 @@ actor = new SimpleSchema({
         type: String,
         regEx: SimpleSchema.RegEx.Url
     },
-    endPoints: {
+    endPoints: { //For other places to get data from. Most commonly sharedInbox.
         type: Object,
+        blackbox: true,
         optional: true
     },
     preferredUsername: { //Handle, or account name. For permanent reference.
@@ -63,10 +64,12 @@ actor = new SimpleSchema({
     },
     icon: {  //Avatar
         type: Object,
+        blackbox: true,
         optional: true
     },
     image: {  //Profile Background
         type: Object,
+        blackbox: true,
         optional: true
     },
     manuallyApprovesFollowers: { //Is this a private account?
@@ -75,6 +78,7 @@ actor = new SimpleSchema({
     },
     publicKey: { //For encryption
         type: Object,
+        blackbox: true,
         optional: true
     }
 });
