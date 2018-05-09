@@ -4,9 +4,11 @@
     License: AGPL-3.0, Check file LICENSE
 */
 
-objectTypes = ['Article', 'Audio', 'Document', 'Event', 'Image', 'Note', 'Page', 'Place', 'Profile', 'Relationship', 'Tombstone', 'Video'];
+import simplSchema from 'simpl-schema';
 
-object = new SimpleSchema({
+activityPubObjectTypes = ['Article', 'Audio', 'Document', 'Event', 'Image', 'Note', 'Page', 'Place', 'Profile', 'Relationship', 'Tombstone', 'Video'];
+
+activityPubObject = new SimpleSchema({
     id: { //This objects unique id. Can be used with activitypub to fetch it if it's public.
         type: String,
         regEx: SimpleSchema.RegEx.Url,
@@ -20,15 +22,17 @@ object = new SimpleSchema({
     },
     type: { //What does this object represent?
         type: String,
-        allowedValues: objectTypes,
+        allowedValues: activityPubObjectTypes,
         defaultValue: 'Note'
     },
     attributedTo: { //The entity or entities responsible for creating this object. Might not necessarily even be an actor.
-        type: SimpleSchema.oneOf(String, Object, Array),
-        blackbox: true
+        type: simplSchema.oneOf(String, Object, Array),
+        blackbox: true,
+        optional: true
     },
     published: { //The date this was published.
-        type: Date
+        type: Date,
+        optional: true
     },
     updated: { //The date this was last updated.
         type: Date,

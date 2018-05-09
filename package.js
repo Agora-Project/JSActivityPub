@@ -41,8 +41,6 @@ Package.onUse(function(api) {
 
     api.export([
         'getActivityFromUrl',
-        'actorTypes',
-        'actor'
     ]);
 });
 

@@ -4,9 +4,9 @@
     License: AGPL-3.0, Check file LICENSE
 */
 
-actorTypes = ['Application', 'Group', 'Organization', 'Person', 'Service'];
+activityPubActorTypes = ['Application', 'Group', 'Organization', 'Person', 'Service'];
 
-actor = new SimpleSchema({
+activityPubActor = new SimpleSchema({
     id: { //This users unique id. Can be used with activitypub to fetch their public data.
         type: String,
         regEx: SimpleSchema.RegEx.Url,
@@ -20,7 +20,7 @@ actor = new SimpleSchema({
     },
     type: { //What does this actor represent?
         type: String,
-        allowedValues: actorTypes,
+        allowedValues: activityPubActorTypes,
         defaultValue: 'Person'
     },
     inbox: { //Activities coming in.
