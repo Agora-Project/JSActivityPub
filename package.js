@@ -41,6 +41,10 @@ Package.onUse(function(api) {
 
     api.export([
         'getActivityFromUrl',
+        'activityPubObjectTypes',
+        'activityPubActor',
+        'activityPubObjectTypes',
+        'activityPubObject'
     ]);
 });
 
