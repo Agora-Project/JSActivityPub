@@ -26,7 +26,7 @@ activityPubObject = new SimpleSchema({
         defaultValue: 'Note'
     },
     attributedTo: { //The entity or entities responsible for creating this object. Might not necessarily even be an actor.
-        type: simplSchema.oneOf(String, Object, Array),
+        type: simplSchema.oneOf(String, Object, [String], [Object]),
         blackbox: true,
         optional: true
     },

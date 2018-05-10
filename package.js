@@ -21,7 +21,8 @@ Package.onUse(function(api) {
 
     api.addFiles([
         'activityRequest.js',
-        'schemas/actor.js'
+        'schemas/actor.js',
+        'schemas/object.js'
     ], 'server');
 
     api.addFiles([
@@ -41,7 +42,7 @@ Package.onUse(function(api) {
 
     api.export([
         'getActivityFromUrl',
-        'activityPubObjectTypes',
+        'activityPubActorTypes',
         'activityPubActor',
         'activityPubObjectTypes',
         'activityPubObject'
