@@ -16,10 +16,12 @@ Package.onUse(function(api) {
     both = ['client', 'server'];
 
     Npm.depends({
-        'simpl-schema': '1.1.0'
+        'simpl-schema': '1.1.0',
+        'ajv': '6.5.0'
     });
 
     api.addFiles([
+        'jsonSchemas.js',
         'activityRequest.js',
         'schemas/actor.js',
         'schemas/object.js'
@@ -45,7 +47,8 @@ Package.onUse(function(api) {
         'activityPubActorTypes',
         'activityPubActor',
         'activityPubObjectTypes',
-        'activityPubObject'
+        'activityPubObject',
+        'activityPubSchemas'
     ]);
 });
 
