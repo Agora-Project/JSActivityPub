@@ -16,15 +16,13 @@ Package.onUse(function(api) {
     both = ['client', 'server'];
 
     Npm.depends({
-        'simpl-schema': '1.1.0',
         'ajv': '6.5.0'
     });
 
     api.addFiles([
-        'jsonSchemas.js',
-        'activityRequest.js',
-        'schemas/actor.js',
-        'schemas/object.js'
+        'lib/jsonSchemas.js',
+        'lib/activityRequest.js',
+        'lib/types.js'
     ], 'server');
 
     api.addFiles([
@@ -32,8 +30,7 @@ Package.onUse(function(api) {
 
     api.use([
         'ecmascript',
-        'timbrandin:fetch',
-        'aldeed:collection2'
+        'timbrandin:fetch'
     ], 'server');
 
     api.addFiles([
@@ -45,9 +42,7 @@ Package.onUse(function(api) {
     api.export([
         'getActivityFromUrl',
         'activityPubActorTypes',
-        'activityPubActor',
         'activityPubObjectTypes',
-        'activityPubObject',
         'activityPubSchemas'
     ]);
 });
