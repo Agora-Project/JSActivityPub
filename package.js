@@ -21,17 +21,20 @@ Package.onUse(function(api) {
 
     api.addFiles([
         'lib/jsonSchemas.js',
-        'lib/activityRequest.js',
-        'lib/types.js'
+        'lib/activityRequest.js'
     ], 'server');
 
     api.addFiles([
+        'lib/types.js'
     ], both);
 
     api.use([
-        'ecmascript',
         'timbrandin:fetch'
     ], 'server');
+
+    api.use([
+        'ecmascript'
+    ], both);
 
     api.addFiles([
     ], 'client');
@@ -44,7 +47,9 @@ Package.onUse(function(api) {
         'activityPubActorTypes',
         'activityPubContentTypes',
         'activityPubActivityTypes',
-        'activityPubSchemas'
+        'activityPubSchemas',
+        'ActivityPubObject',
+        'ActivityPubActivity'
     ]);
 });
 
