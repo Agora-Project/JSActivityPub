@@ -15,12 +15,7 @@ Package.describe({
 Package.onUse(function(api) {
     both = ['client', 'server'];
 
-    Npm.depends({
-        'ajv': '6.5.0'
-    });
-
     api.addFiles([
-        'lib/jsonSchemas.js',
         'lib/activityRequest.js'
     ], 'server');
 
