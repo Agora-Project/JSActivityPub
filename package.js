@@ -16,15 +16,10 @@ Package.onUse(function(api) {
     both = ['client', 'server'];
 
     api.addFiles([
-        'lib/activityRequest.js'
-    ], 'server');
-
-    api.addFiles([
         'lib/types.js'
     ], both);
 
     api.use([
-        'timbrandin:fetch'
     ], 'server');
 
     api.use([
