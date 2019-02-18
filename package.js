@@ -20,20 +20,10 @@ Package.onUse(function(api) {
     ], both);
 
     api.use([
-    ], 'server');
-
-    api.use([
         'ecmascript'
     ], both);
 
-    api.addFiles([
-    ], 'client');
-
-    api.use([
-    ], 'client');
-
     api.export([
-        'getActivityFromUrl',
         'activityPubActorTypes',
         'activityPubContentTypes',
         'activityPubActivityTypes',
